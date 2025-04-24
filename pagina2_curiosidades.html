@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!-- Início do Head com customizações -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Página de Curiosidades</title>
+    <!-- Início do CSS Interno -->
+    <style>
+        /* Estilo para o botão */
+        button {
+            padding: 10px;
+            background-color: #505050;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Estilo para o botão de modo escuro */
+        button.darkmode {
+            background-color: #333;
+            /* Escuro */
+            color: white;
+        }
+    </style>
+    <!-- Final do CSS Interno -->
+    <!-- Referenncia para Javascript Externo -->
+    <script src="scripts.js"></script>
+</head>
+<!-- Final do Head com customizações -->
+<!-- Início do Corpo -->
+<body>
+    <!-- Início do Cabeçalho -->
+    <header>
+        <a href="pagina1_principal.html">
+            <img src="IMG/logo.png" alt="Logo" class="logo" style="height:140px;" id="logo">
+        </a>
+        <!-- Menu de navegação -->
+        <nav>
+            <ul>
+                <li><a href="pagina1_principal.html">Início</a></li>
+                <li><a href="pagina2_curiosidades.html">Curiosidades</a></li>
+                <li><a href="pagina3_tabela.html">Informações</a></li>
+                <li><a href="pagina4_formulario.html">Contato</a></li>
+                <li><a href="pagina5_catalogo.html">Catálogo</a></li>
+            </ul>
+        </nav>
+        <!-- Botão de alternância de modo -->
+        <button onclick="toggleDarkMode()">Alternar Modo</button>
+    </header>
+    <!-- Final do Cabeçalho -->
+    <!-- Início do Main principal -->
+    <main>
+        <!-- Início da Sessão de Curiosidades -->
+        <div class="curiosidades">
+            <h1>Curiosidades</h1>
+            <div class="menu-opcoes">
+                <button id="opcao1"><strong>Oxalá</strong></button>
+                <button id="opcao2"><strong>Ogum</strong></button>
+                <button id="opcao3"><strong>Iemanjá</strong></button>
+                <button id="opcao4"><strong>Iansã</strong></button>
+                <button id="opcao5"><strong>Oxóssi</strong></button>
+                <button id="opcao6"><strong>Oxum</strong></button>
+                <button id="opcao7"><strong>Xangô</strong></button>
+            </div>
+            <div id="conteudo">
+                <p>Selecione uma das Entidades para visualizar mais detalhes.</p>
+                <img src="IMG/7orixas.png" alt="Todos os 7 Orixás" style="height: 400px;">
+            </div>
+        </div>
+
+        <section class="info">
+            <div class="info-image">
+                <img src="IMG/entidadeorixas.png" alt="Entidades e Oxixas">
+            </div>
+            <div class="info-text">
+                <h2>O que é Orixá?</h2>
+                <p>Os orixás são divindades da religião afro-brasileira, representando forças da natureza e aspectos da
+                    vida humana. Cada orixá possui qualidades, histórias, cores e símbolos específicos, e está associado
+                    a temas como amor, guerra e saúde. <br><br> Exemplos incluem: Oxalá, Iansã, Ogun e Oxum.
+                </p>
+                <h2>O que é Entidade?</h2>
+                <p>Entidade refere-se a espíritos, guias ou ancestrais que podem ser invocados ou cultuados. As
+                    entidades incluem espíritos de pessoas desencarnadas e forças elementares. Na Umbanda, por exemplo,
+                    são agrupadas em linhas de trabalho, como caboclos e pretos-velhos, e atuam como guias espirituais,
+                    mas não são necessariamente divindades.</p>
+            </div>
+        </section>
+        <!-- Final da Sessão de Curiosidades -->
+        <!-- Início do Aside com Resumo -->
+        <aside>
+            <div class="info-text">
+                <h2>Resumo da Diferença</h2>
+                <p><strong>Origem:</strong>
+                    Os orixás são divindades com origem africana, enquanto as entidades podem ser espíritos de várias
+                    origens, incluindo ancestrais ou seres elementares <br>
+                    <strong>Função:</strong>
+                    Os orixás têm funções específicas dentro da religião e são objeto de adoração formal, enquanto as
+                    entidades podem atuar como guias e protetores, <br> sem serem necessariamente adoradas da mesma
+                    forma que
+                    os orixás. <br>
+                    <strong>Culto e Rituais:</strong> Os orixás são cultuados em rituais específicos, enquanto as
+                    entidades podem ser invocadas em contextos variados, <br> incluindo rituais de incorporação e
+                    trabalhos
+                    espirituais. <br>
+                    Essas diferenças ajudam a entender a rica diversidade das tradições religiosas afro-brasileiras <br>
+                    e como diferentes entidades e orixás desempenham papéis distintos na espiritualidade das pessoas que
+                    as seguem.
+                </p>
+            </div>
+        </aside>
+        <!-- Final do Aside -->
+    </main>
+    <!-- Final do Main principal-->
+    <!-- Inicío do Rodapé -->
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contato</h3>
+                <p>Endereço: Praça General Osório, 125...</p>
+                <p>Telefone: 0800 721 5844</p>
+            </div>
+            <div class="social-media">
+                <h3>Redes Sociais</h3>
+                <div class="dropup">
+                    <button class="dropbtn">Menu</button>
+                    <div class="dropup-content">
+                        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+                        <a href="https://www.facebook.com" target="_blank">Facebook</a>
+                        <a href="https://www.whatsapp.com" target="_blank">WhatsApp</a>
+                        <a href="https://www.tiktok.com" target="_blank">TikTok</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Final do Rodapé -->
+    <!-- Início do Javascript Interno -->
+    <script>
+        function toggleDarkMode() {
+            // Alternar classe de modo escuro
+            document.body.classList.toggle('darkmode');
+            document.querySelector('header').classList.toggle('darkmode');
+            document.querySelector('footer').classList.toggle('darkmode');
+            const buttons = document.querySelectorAll('button');
+            buttons.forEach(button => button.classList.toggle('darkmode'));
+            const navLinks = document.querySelectorAll('header nav a');
+            navLinks.forEach(link => link.classList.toggle('darkmode'));
+
+            // Alterar a imagem do logo
+            const logo = document.getElementById('logo');
+            if (document.body.classList.contains('darkmode')) {
+                logo.src = 'IMG/logo_dark.png';
+            } else {
+                logo.src = 'IMG/logo.png';
+            }
+        }
+    </script>
+    <!-- Final do Javascript Interno -->
+</body>
+<!-- Final do Copro -->
+</html>

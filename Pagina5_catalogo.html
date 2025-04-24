@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!-- Início do Head com customizações -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Produtos</title>
+    <link rel="stylesheet" href="estilos.css">
+    <!-- Início do CSS Interno -->
+    <style>
+        /* Tamanho fixo para imagem */
+        main img {
+            height: 500px;
+        }
+
+        /* Estilo para o botão */
+        button {
+            padding: 10px;
+            background-color: #505050;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Corpo da página no modo escuro */
+        body.darkmode {
+            background-color: #121212;
+            color: white;
+        }
+
+        /* Estilo para o cabeçalho no modo escuro */
+        header.darkmode {
+            background-color: #333;
+            color: white;
+        }
+
+        /* Estilo para o rodapé no modo escuro */
+        footer.darkmode {
+            background-color: #333;
+            color: white;
+        }
+
+        /* Estilo para links no modo escuro */
+        a.darkmode {
+            color: #69a5e6;
+        }
+
+        /* Estilo para o Modal no modo escuro */
+        .modal.darkmode {
+            background-color: rgba(0, 0, 0, 0.9);
+            color: white;
+        }
+
+        /* Estilo para o conteúdo do Modal no modo escuro */
+        .modal-content.darkmode {
+            background-color: #333;
+            color: white;
+        }
+
+        /* Estilo para o botão de fechar no modo escuro */
+        .close.darkmode {
+            color: white;
+        }
+
+        /* Também altere a cor do texto nos links de navegação dentro do header */
+        header.darkmode nav a {
+            color: white;
+        }
+
+        /* Cor dos itens de navegação no header ao passar o mouse */
+        header.darkmode nav a:hover {
+            color: #ccc;
+        }
+
+        .accordion {
+            background-color: #505050;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 16px;
+            border-radius: 4px;
+        }
+
+        /* Estilo para o painel de conteúdo do Accordion */
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: #1413139c;
+            color: white;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .panel img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Estilo do título */
+        .produto-titulo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* Efeito de hover para o botão */
+        .accordion:hover {
+            background-color: #777;
+        }
+    </style>
+    <!-- Final do CSS Interno -->
+</head>
+<!-- Final do Head com customizações -->
+<!-- Início do Corpo -->
+<body>
+    <!-- Início do cabeçalho -->
+    <header>
+        <a href="pagina1_principal.html"><img src="IMG/logo.png" alt="Logo" class="logo" id="logo"
+                style="height:140px;"></a>
+        <!-- Menu de navegação -->
+        <nav>
+            <ul>
+                <li><a href="pagina1_principal.html">Início</a></li>
+                <li><a href="pagina2_curiosidades.html">Curiosidades</a></li>
+                <li><a href="pagina3_tabela.html">Informações</a></li>
+                <li><a href="pagina4_formulario.html">Contato</a></li>
+                <li><a href="pagina5_catalogo.html">Catálogo</a></li>
+            </ul>
+        </nav>
+        <!-- Botão de alternância de modo com ID adicionado -->
+        <button id="darkModeToggle">Alternar Modo</button>
+    </header>
+    <!-- Final do Cabeçalho -->
+
+    <!-- Início do Main para catálogo -->
+    <main>
+        <h1>Catálogo de Produtos</h1>
+
+        <!-- Produto 1 -->
+        <button class="accordion" style="text-align: center;">Kit Conga</button>
+        <div class="panel">
+            <img src="IMG/kitconga.jpg" style="height: 25%; width: 25%;" alt="Produto 1">
+            <p class="produto-titulo">Kit Conga Altar Madeira Escadas Umbanda Candomblé Orixás Axé</p>
+            <p>kit altar + 9 imagens<br> 
+                <br>
+                Conga em madeira<br>
+                Largura 25<br>
+                Altura 20<br>
+                comprimento 26<br>
+                
+                Imagens em resina em média 7cm<br><br>
+                Favor consultar imagens disponíveis, caso não seja enviado sua escolha , será enviado conforme disponibilidade!<br>
+                
+                Pronta Entrega. Produtos cheios de energia , significado e axé! </p>
+        </div>
+
+        <!-- Produto 2 -->
+        <button class="accordion" style="text-align: center;">Orixás em Resina</button>
+        <div class="panel">
+            <img src="IMG/kitorixas.jpg" style="height: 25%; width: 25%;" alt="Produto 2">
+            <p class="produto-titulo">Orixás Da Umbanda Em Resina 15 Cm Com Porta Vela/p>
+            <p>Cada peça é feita com um alto nível de detalhamento, realçando a beleza e a presença dos Orixás.<br><br>
+
+                A combinação de resina durável com a base de madeira e o porta-vela cria uma peça não apenas visualmente atraente, mas também prática para rituais e decorações.<br><br>
+                
+                Especificações Técnicas do produto:<br>
+                Média de Medidas Aproximadas:<br>
+                - Altura: 16 cm<br>
+                - Comprimento: 12 cm<br>
+                - Largura: 6 cm<br>
+                - Peso: 286 g<br>
+                - Material: Resina de alta qualidade, durável e resistente.<br><br>
+                
+                Nesse Anúncio enviamos 1 Peça. Orixás Disponíveis:<br>
+                Egunitá, Exú ,Ewá ,Iemanjá Africana ,Iemanjá Brasileira, Iansã, Logunedé, Nanã Buruque, Obá, Obalua, Ogum, Ossaim, Oxaguiã, Oxalufã, Oxóssi, Oxum, Oxumaré, Pomba Gira, Xangô<br><br>
+                
+                Cada imagem é uma obra de arte única que adiciona um toque espiritual ao seu ambiente.<br><br>
+                
+                Compre com confiança! Oferecemos uma garantia de 7 dias contra defeitos de fabricação, proporcionando segurança e tranquilidade para você.</p>
+        </div>
+
+        <!-- Produto 3 -->
+        <button class="accordion" style="text-align: center;">Kit Vela LED</button>
+        <div class="panel">
+            <img src="IMG/kitvelaled.jpg" style="height: 25%; width: 25%;" alt="Produto 3">
+            <p class="produto-titulo">Vela Led De 40 Peças, Decoração De Árvore De Natal Com Clipe</p>
+            <p>Luzes de vela penduradas na árvore de Natal Controle remoto de corda de luz LED com fio de luz branca quente Decoração de Natal (pode ser controlada remotamente)<br><br>
+
+                Característica:<br>
+                - Material de alta qualidade: as luzes de corda internas da árvore de Natal apresentam um design clássico de vela de Natal. Essas luzes de corda apresentam uma luz branca quente que é perfeita para qualquer ambiente neste Natal.<br><br>
+                
+                - Consumo eficiente de energia: elas apresentam lâmpadas LED de baixa tensão que prolongam a vida útil da bateria e aumentam a eficiência, tornando-as perfeitas para levar a magia e o calor do Natal para casa.<br><br>
+                
+                - Fácil instalação: 40 lâmpadas LED para uso interno, fios brancos e verdes quentes, cada vela mantida no lugar com um clipe.<br><br>
+                
+                Especificação:<br>
+                Cor: branco quente<br>
+                Material: plástico<br>
+                Método de alimentação: 3 pilhas AA (não incluídas na embalagem)<br>
+                Acessórios: controle remoto (bateria do controle remoto)<br><br>
+                                
+                Lista de embalagem:<br>
+                2 * fio de vela de Natal (cada fio tem 20 velas)<br>
+                2 * Controle remoto</p>
+        </div>
+
+        <!-- Produto 4 -->
+        <button class="accordion" style="text-align: center;">Kit Assentamento</button>
+        <div class="panel">
+            <img src="IMG/kitexu.jpg" style="height: 25%; width: 25%;" alt="Produto 4">
+            <p class="produto-titulo">Kit Assentamento de Exú Completo - 39 ELEMENTOS</p>
+            <p>Kit Assentamento de Exú Completo - Para Firmar e Conectar com o Orixá Guardião<br><br>
+
+                Prepare um assentamento poderoso para Exú com o Kit Assentamento de Exú Completo. <br>
+                Este kit contém todos os elementos necessários para firmar e conectar-se com a energia protetora e guardiã de Exú.</p>
+        </div>
+    </main>
+    <!-- Final do Main -->
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contato</h3>
+                <p>Endereço: Praça General Osório, 125 - Centro, Curitiba/PR</p>
+                <p>Telefone: 0800 721 5844</p>
+            </div>
+            <div class="social-media">
+                <h3>Redes Sociais</h3>
+                <div class="dropup">
+                    <button class="dropbtn">Menu</button>
+                    <div class="dropup-content">
+                        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+                        <a href="https://www.facebook.com" target="_blank">Facebook</a>
+                        <a href="https://www.whatsapp.com" target="_blank">WhatsApp</a>
+                        <a href="https://www.tiktok.com" target="_blank">TikTok</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Final do Rodapé -->
+    <!-- Início do Javascript Interno -->
+    <script>
+        // Script do Accordion
+        var accordions = document.getElementsByClassName("accordion");
+
+        for (var i = 0; i < accordions.length; i++) {
+            accordions[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+
+                // Alterna a visibilidade do painel
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const botaoDarkMode = document.getElementById("darkModeToggle");
+            const logo = document.getElementById("logo");
+
+            botaoDarkMode.addEventListener('click', function () {
+                document.body.classList.toggle('darkmode');
+                document.querySelector('header').classList.toggle('darkmode');
+                document.querySelector('footer').classList.toggle('darkmode');
+
+                // Aplica o modo escuro aos links de navegação
+                const navLinks = document.querySelectorAll('nav a');
+                navLinks.forEach(function (link) {
+                    link.classList.toggle('darkmode');
+                });
+
+                // Aplica o modo escuro ao menu dropup
+                const dropupMenu = document.querySelector('.dropup');
+                dropupMenu.classList.toggle('darkmode');
+
+                // Troca de imagem da logo
+                if (document.body.classList.contains('darkmode')) {
+                    logo.src = "IMG/logo_dark.png";
+                } else {
+                    logo.src = "IMG/logo.png";
+                }
+            });
+        });
+    </script>
+    <!-- Final do Javascript Interno -->
+</body>
+<!-- Final do Copro -->
+</html>

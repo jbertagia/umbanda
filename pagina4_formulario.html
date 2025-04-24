@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Página de Contato</title>
+    <!-- Início do CSS interno -->
+    <style>
+        /* Centralizar o conteúdo completo (título e formulário) */
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        /* Estilo para o título */
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo para o formulário (permanece o mesmo) */
+        form {
+            max-width: 400px;
+            width: 100%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        /* Estilo para os inputs */
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        /* Label ajustada */
+        label {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* Estilo para o botão */
+        button {
+            padding: 10px;
+            background-color: #505050;
+            color: white;
+            border: none;
+            /* Remove bordas */
+            border-radius: 4px;
+            cursor: pointer;
+            /* Cursor de mãozinha */
+        }
+
+        /* Estilo para o botão de modo escuro */
+        button.darkmode {
+            background-color: #333;
+            /* Escuro */
+            color: white;
+        }
+
+        /* Divisão das linhas */
+        .linha {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            /* Espaço entre colunas */
+        }
+
+        .coluna {
+            flex: 1;
+            /* Para cada coluna ocupar o mesmo espaço */
+        }
+
+        /* Estilo para o modo escuro */
+        body.darkmode {
+            background-color: #2c2c2c;
+            color: white;
+        }
+
+        header.darkmode {
+            background-color: #333;
+        }
+
+        footer.darkmode {
+            background-color: #333;
+            color: white;
+        }
+
+        button.darkmode {
+            background-color: #222;
+            color: white;
+        }
+
+        header nav a.darkmode {
+            color: #fff;
+        }
+
+        main.darkmode {
+            background-color: #1a1a1a;
+            /* Cor de fundo escura */
+            color: white;
+            /* Cor do texto branca */
+        }
+
+        main.darkmode form {
+            background-color: #333;
+            /* Fundo escuro para o formulário */
+        }
+
+        main.darkmode label {
+            color: white;
+            /* Rótulos brancos no modo escuro */
+        }
+
+        main.darkmode input,
+        main.darkmode select {
+            background-color: #444;
+            /* Cor de fundo escura para inputs */
+            color: white;
+            /* Texto branco para inputs */
+            border: 1px solid #666;
+            /* Borda mais clara para os campos */
+        }
+
+        /* Estilo para o formulário no modo escuro */
+        body.darkmode form {
+            background-color: #333;
+            /* Fundo escuro para o formulário */
+            color: white;
+            /* Texto claro */
+        }
+
+        body.darkmode input,
+        body.darkmode select,
+        body.darkmode textarea {
+            background-color: #555;
+            /* Fundo escuro para inputs */
+            color: white;
+            /* Texto claro para inputs */
+            border: 1px solid #888;
+            /* Borda clara */
+        }
+
+        body.darkmode button {
+            background-color: #333;
+            color: white;
+        }
+
+        body.darkmode button:hover {
+            background-color: #444;
+        }
+
+        /* Para os rótulos também ficarem visíveis no modo escuro */
+        body.darkmode label {
+            color: white;
+        }
+
+        /* Ajuste para o título do formulário */
+        body.darkmode h1 {
+            color: white;
+        }
+    </style>
+    <!-- Final do CSS interno -->
+    <script src="scripts.js"></script>
+</head>
+<!-- Início do Corpo -->
+
+<body>
+    <!-- Início do cabeçalho -->
+    <header>
+        <a href="pagina1_principal.html">
+            <img src="IMG/logo.png" alt="Logo" class="logo" style="height:140px;" id="logo">
+        </a>
+        <!-- Menu de navegação -->
+        <nav>
+            <ul>
+                <li><a href="pagina1_principal.html">Início</a></li>
+                <li><a href="pagina2_curiosidades.html">Curiosidades</a></li>
+                <li><a href="pagina3_tabela.html">Informações</a></li>
+                <li><a href="pagina4_formulario.html">Contato</a></li>
+                <li><a href="pagina5_catalogo.html">Catálogo</a></li>
+            </ul>
+        </nav>
+        <!-- Botão de alternância de modo -->
+        <button onclick="toggleDarkMode()">Alternar Modo</button>
+    </header>
+    <!-- Final do Cabeçalho -->
+    <!-- Início do Main para integrar janela inteira -->
+    <main>
+        <!-- Início do Formulário -->
+        <h1>Formulário de Contato</h1>
+        <form id="formulario">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" maxlength="30" required>
+            <br>
+            <!-- Título do rótulo -->
+            <label for="orixa">Qual seu Orixá?</label>
+            <select id="orixas" required>
+                <option value="">Selecione</option>
+                <option value="oxala">Oxalá</option>
+                <option value="oxossi">Oxóssi</option>
+                <option value="iemanja">Iemanjá</option>
+                <option value="ogum">Ogum</option>
+                <option value="oxum">Oxum</option>
+                <option value="xango">Xangô</option>
+                <option value="iemanja">Iansã</option>
+            </select>
+            <br>
+            <!-- Título do rótulo -->
+            <label for="exu">Seu Exu:</label>
+            <input type="text" id="exu" maxlength="30" required>
+
+            <!-- Caixa de digitação de endereço -->
+            <div class="linha">
+                <div class="coluna">
+                    <label for="cep">CEP:</label>
+                    <input type="text" id="cep" maxlength="9" minlength="9" required>
+                </div>
+                <div class="coluna">
+                    <label for="telefone">Telefone:</label>
+                    <input type="text" id="telefone" maxlength="15" minlength="14" required>
+                </div>
+            </div>
+            <div class="linha">
+                <div class="coluna">
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" id="cidade" maxlength="15">
+                </div>
+                <!-- Área com dados dos estados disponíveis no Brasil -->
+                <div class="coluna">
+                    <label for="estado">Estado:</label>
+                    <select id="estado">
+                        <option value="">Selecione</option>
+                        <option value="AC">AC</option>
+                        <option value="AL">AL</option>
+                        <option value="AP">AP</option>
+                        <option value="AM">AM</option>
+                        <option value="BA">BA</option>
+                        <option value="CE">CE</option>
+                        <option value="DF">DF</option>
+                        <option value="ES">ES</option>
+                        <option value="GO">GO</option>
+                        <option value="MA">MA</option>
+                        <option value="MT">MT</option>
+                        <option value="MS">MS</option>
+                        <option value="MG">MG</option>
+                        <option value="PA">PA</option>
+                        <option value="PB">PB</option>
+                        <option value="PR">PR</option>
+                        <option value="PE">PE</option>
+                        <option value="PI">PI</option>
+                        <option value="RJ">RJ</option>
+                        <option value="RN">RN</option>
+                        <option value="RS">RS</option>
+                        <option value="RO">RO</option>
+                        <option value="RR">RR</option>
+                        <option value="SC">SC</option>
+                        <option value="SP">SP</option>
+                        <option value="SE">SE</option>
+                        <option value="TO">TO</option>
+                    </select>
+                </div>
+            </div>
+            <!-- Botão para enviar dados -->
+            <button type="submit">Enviar</button>
+        </form>
+        <!-- Final do Formulário -->
+    </main>
+    <!-- Final do Main -->
+    <!-- Início do Rodapé ]-->
+    <footer>
+        <div class="footer-content">
+            <!-- Área com dados para contato -->
+            <div class="contact-info">
+                <h3>Contato</h3>
+                <p>Endereço: Praça General Osório, 125 - Centro, Curitiba/PR</p>
+                <p>Telefone: 0800 721 5844</p>
+            </div>
+            <!-- Área com Redes Sociais -->
+            <div class="social-media">
+                <h3>Redes Sociais</h3>
+                <br>
+                <div class="dropup">
+                    <button class="dropbtn">Menu</button>
+                    <!-- Menu Dropup -->
+                    <div class="dropup-content">
+                        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+                        <a href="https://www.facebook.com" target="_blank">Facebook</a>
+                        <a href="https://www.whatsapp.com" target="_blank">WhatsApp</a>
+                        <a href="https://www.tiktok.com" target="_blank">TikTok</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Final do Rodapé -->
+    <!-- Início do script -->
+    <script>
+        function toggleDarkMode() {
+            // Alterna o modo escuro para os elementos da página
+            document.body.classList.toggle('darkmode');
+            document.querySelector('header').classList.toggle('darkmode');
+            document.querySelector('footer').classList.toggle('darkmode');
+            document.querySelector('main').classList.toggle('darkmode');
+
+            // Alterna as classes de modo escuro para os botões e links
+            const buttons = document.querySelectorAll('button');
+            buttons.forEach(button => button.classList.toggle('darkmode'));
+            const navLinks = document.querySelectorAll('header nav a');
+            navLinks.forEach(link => link.classList.toggle('darkmode'));
+
+            // Altera a imagem do logo com base no modo atual
+            const logo = document.getElementById('logo');
+            if (document.body.classList.contains('darkmode')) {
+                logo.src = 'IMG/logo_dark.png';
+            } else {
+                logo.src = 'IMG/logo.png';
+            }
+        }
+    </script>
+    <!-- Final do script -->
+</body>
+<!-- Final do Corpo -->
+
+</html>

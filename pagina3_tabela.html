@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!-- Início do Head com customizações -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Página de Informações</title>
+    <!-- Início do CSS Interno -->
+    <style>
+        /* Estilos internos */
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        table {
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        th {
+            position: relative;
+            /* Necessário para posicionar a seta */
+        }
+
+        thead{
+            background-color: black;
+            color: white;
+        }
+
+        thead.darkmode{
+            background-color: white;
+            color: black;
+        }
+        
+        #filterInput {
+            margin: 20px 0;
+            padding: 8px;
+            width: 50%;
+            font-size: 16px;
+        }
+
+        /* Estilos para as setas de ordenação */
+        .sort-arrow {
+            font-size: 12px;
+            margin-left: 5px;
+            display: inline-block;
+            position: absolute;
+            right: 10px;
+        }
+
+        .asc::after {
+            content: "▲";
+        }
+
+        .desc::after {
+            content: "▼";
+        }
+
+
+        /* Estilo para o botão */
+        button {
+            padding: 10px;
+            background-color: #505050;
+            color: white;
+            border: none;
+            /* Remove bordas */
+            border-radius: 4px;
+            cursor: pointer;
+            /* Cursor de mãozinha */
+        }
+
+        /* Estilo para o botão de modo escuro */
+        button.darkmode {
+            background-color: #333;
+            color: white;
+        }
+    </style>
+    <!-- Final do CSS Interno -->
+    <!-- Referenncia para Javascript Externo -->
+</head>
+<!-- Final do Head com customizações -->
+<!-- Início do Corpo -->
+
+<body>
+    <!-- Início do Cabeçalho -->
+    <header>
+        <a href="pagina1_principal.html">
+            <img src="IMG/logo.png" alt="Logo" class="logo" style="height:140px;" id="logo">
+        </a>
+        <!-- Menu de navegação -->
+        <nav>
+            <ul>
+                <li><a href="pagina1_principal.html">Início</a></li>
+                <li><a href="pagina2_curiosidades.html">Curiosidades</a></li>
+                <li><a href="pagina3_tabela.html">Informações</a></li>
+                <li><a href="pagina4_formulario.html">Contato</a></li>
+                <li><a href="pagina5_catalogo.html">Catálogo</a></li>
+            </ul>
+        </nav>
+        <!-- Botão de alternância de modo -->
+        <button onclick="toggleDarkMode()">Alternar Modo</button>
+    </header>
+    <!-- Final do Cabeçalho -->
+    <!-- Início do Main principal -->
+    <main>
+        <!-- Início da Sessão com a Tabela -->
+        <section>
+            <h1>A relação energética entre os Chakras, as linhas da Umbanda e os Orixás</h1>
+            <input type="text" id="filterInput" placeholder="Filtrar tabela..." onkeyup="filterTable()">
+            <!-- Início da Tabela -->
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th onclick="sortTable(0)">Número</th>
+                        <th onclick="sortTable(1)">Frequência</th>
+                        <th onclick="sortTable(2)">Chakra</th>
+                        <th onclick="sortTable(3)">Orixas Regentes</th>
+                        <th onclick="sortTable(4)">Sentido da Vida</th>
+                        <th onclick="sortTable(5)">Entidades</th>
+                        <th onclick="sortTable(6)">O que trava o Chakra</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>01</td>
+                        <td>963 Hz</td>
+                        <td>Coronário</td>
+                        <td>Oxalá e Oyá</td>
+                        <td>Fé</td>
+                        <td>Baianos e Boiadeiros</td>
+                        <td>Apego e Ego</td>
+                    </tr>
+                    <tr>
+                        <td>02</td>
+                        <td>852 Hz</td>
+                        <td>Terceiro Olho</td>
+                        <td>Oxossi e Obá</td>
+                        <td>Conhecimento</td>
+                        <td>Caboclos</td>
+                        <td>Ilusão</td>
+                    </tr>
+                    <tr>
+                        <td>03</td>
+                        <td>741 Hz</td>
+                        <td>Laríngeo</td>
+                        <td>Ogun e Iansã</td>
+                        <td>Lei</td>
+                        <td>Baianos, Boiadeiros e Exus</td>
+                        <td>Mentiras</td>
+                    </tr>
+                    <tr>
+                        <td>04</td>
+                        <td>639 Hz</td>
+                        <td>Cardíaco</td>
+                        <td>Oxum e Oxumaré</td>
+                        <td>Amor</td>
+                        <td>Erês e Pombogiras</td>
+                        <td>Tristezas</td>
+                    </tr>
+                    <tr>
+                        <td>05</td>
+                        <td>528 Hz</td>
+                        <td>Plexo Solar</td>
+                        <td>Obaluaê e Nanã</td>
+                        <td>Evolução</td>
+                        <td>Pretos Velhos</td>
+                        <td>Vergonha</td>
+                    </tr>
+                    <tr>
+                        <td>06</td>
+                        <td>417 Hz</td>
+                        <td>Sacral</td>
+                        <td>Xangô e Egunitá</td>
+                        <td>Justiça</td>
+                        <td>Ciganos</td>
+                        <td>Culpa</td>
+                    </tr>
+                    <tr>
+                        <td>07</td>
+                        <td>396 Hz</td>
+                        <td>Raiz</td>
+                        <td>Yemanjá e Omulu</td>
+                        <td>Geração</td>
+                        <td>Marinheiros</td>
+                        <td>Medo</td>
+                    </tr>
+                    <tr>
+                        <td>08</td>
+                        <td>Entre 639 e 741 Hz</td>
+                        <td>Raiz</td>
+                        <td>(Esquerda)</td>
+                        <td>Assuntos mundanos</td>
+                        <td>Exu e Pombogira</td>
+                        <td>Medo</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- Final da Tabela -->
+            <p>As Informações foram retiradas do <a
+                    href="https://cabanaquintadaserra.com.br/a-relacao-energetica-entre-os-chakras-as-linhas-da-umbanda-e-os-orixas/"
+                    target="_blank">Caba Quinta da Serra</a>.</p><br>
+        </section>
+        <!-- Final da Sessão -->
+    </main>
+    <!-- Final do Main principal-->
+    <!-- Inicío do Rodapé -->
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contato</h3>
+                <p>Endereço: Praça General Osório, 125 - Centro, Curitiba/PR</p>
+                <p>Telefone: 0800 721 5844</p>
+            </div>
+            <div class="social-media">
+                <h3>Redes Sociais</h3>
+                <div class="dropup">
+                    <button class="dropbtn">Menu</button>
+                    <div class="dropup-content">
+                        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+                        <a href="https://www.facebook.com" target="_blank">Facebook</a>
+                        <a href="https://www.whatsapp.com" target="_blank">WhatsApp</a>
+                        <a href="https://www.tiktok.com" target="_blank">TikTok</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Final do Rodapé -->
+    <!-- Início do Javascript Interno -->
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('darkmode');
+            document.querySelector('header').classList.toggle('darkmode');
+            document.querySelector('footer').classList.toggle('darkmode');
+            const buttons = document.querySelectorAll('button');
+            buttons.forEach(button => button.classList.toggle('darkmode'));
+            const navLinks = document.querySelectorAll('header nav a');
+            navLinks.forEach(link => link.classList.toggle('darkmode'));
+
+            // Alternância do cabeçalho da tabela
+            const tableHead = document.querySelector('thead');
+            tableHead.classList.toggle('darkmode');
+            console.log(tableHead.classList);
+
+            // Alternância da logo
+            const logo = document.getElementById('logo');
+            if (document.body.classList.contains('darkmode')) {
+                logo.src = 'IMG/logo_dark.png';
+            } else {
+                logo.src = 'IMG/logo.png';
+            }
+        }
+
+        // Função para filtrar as linhas da tabela com base na pesquisa
+        function filterTable() {
+            const filter = document.getElementById("filterInput").value.toUpperCase();
+            const table = document.querySelector("table");
+            const rows = Array.from(table.querySelectorAll("tbody tr"));
+
+            rows.forEach(row => {
+                const cells = row.getElementsByTagName("td");
+                let showRow = false;
+
+                for (let i = 0; i < cells.length; i++) {
+                    if (cells[i].textContent.toUpperCase().indexOf(filter) > -1) {
+                        showRow = true;
+                        break;
+                    }
+                }
+
+                row.style.display = showRow ? "" : "none";
+            });
+        }
+
+        // Função para ordenar as linhas da tabela
+        function sortTable(columnIndex) {
+            const table = document.querySelector("table");
+            const rows = Array.from(table.querySelectorAll("tbody tr"));
+
+            let direction = table.getAttribute("data-sort-direction") || "asc";
+            direction = direction === "asc" ? "desc" : "asc";
+            table.setAttribute("data-sort-direction", direction);
+
+            rows.sort((rowA, rowB) => {
+                const cellA = rowA.cells[columnIndex].innerText.trim();
+                const cellB = rowB.cells[columnIndex].innerText.trim();
+                const isNumber = !isNaN(cellA) && !isNaN(cellB);
+                let comparison = 0;
+
+                if (isNumber) {
+                    comparison = parseFloat(cellA) - parseFloat(cellB);
+                } else {
+                    comparison = cellA.localeCompare(cellB);
+                }
+
+                return direction === "asc" ? comparison : -comparison;
+            });
+
+            const tbody = table.querySelector("tbody");
+            rows.forEach(row => tbody.appendChild(row));
+
+            document.querySelectorAll("th").forEach(th => th.classList.remove("asc", "desc"));
+            const header = table.querySelector(`th:nth-child(${columnIndex + 1})`);
+            header.classList.add(direction === "asc" ? "asc" : "desc");
+        }
+    </script>
+    <!-- Final do Javascript Interno -->
+</body>
+<!-- Final do Copro -->
+
+</html>
